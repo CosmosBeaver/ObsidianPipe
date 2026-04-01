@@ -221,7 +221,7 @@ class Reader:
                     tables = page.extract_tables()
                     for table in tables:
                         if table:
-                            formatted_table = tabulate(table, headers="firstrow", tablefmt="grid")
+                            formatted_table = tabulate(table)
                             all_text.append(f"\n{formatted_table}\n")
 
             return {

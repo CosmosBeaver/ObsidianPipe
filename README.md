@@ -30,8 +30,16 @@ obsidian_converter/
 
 
 -- TO DO
+    indentare originala (indentare noua Obsidian?)
     pozele sa fie pe background negru
     fa poza la tabel in loc de a l extrage
     cum sa se lege de path-ul OCR-ului fara absoulte path
+    URASTE diacriticele
+    face poze la tot randu in loc de doar la simboluri
+    setul de is_math_formula sa nu contina litere grecesti, doar operatori si simboluri
+    pozele ocupa tot randul in loc sa fie scalate la text
+
+--  Idei
+     daca e cuprins intr 2 linii de cuvinte este formula si trb pozata de la linie la linie
 
 
