@@ -121,7 +121,7 @@ class Reader:
             return {
                 "file": file_path,
                 "title":file_title,
-                "tables": final_markdown
+                "text": final_markdown
             }
 
         except Exception as e:
