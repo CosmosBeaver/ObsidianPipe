@@ -10,9 +10,7 @@ from PIL import Image
 import pytesseract
 from pytesseract import Output
 from langdetect import detect
-from datetime import datetime
 import subprocess
-import mimetypes
 import logging
 import cv2
 import numpy as np
@@ -38,44 +36,57 @@ class Reader:
 
     def readtxt(self, file_path):
         try:
+            file_title = os.path.basename(file_path).replace(".txt", "")
             with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
-                content = file.read().split("\n")  # Store lines as a list
-            return {"file": file_path, "text": content}
+                content = file.read()
+            return {"file": file_path,
+                    "title":file_title,
+                    "text": content
+            }
         except Exception as x:
             return {"file": file_path, "error": str(x)}
 
     def readocx(self, file_path):
         try:
+            file_title = os.path.basename(file_path).replace(".docx", "")
             document = Document(file_path)
+            all_content = [] # Store everything sequentially here
 
-            # Wrap paragraphs into lines of 12 words using textwrap
-            formatted_text = []
+            # Wrap paragraphs
             for para in document.paragraphs:
                 cleaned_text = para.text.strip()
                 if cleaned_text:
-                    wrapped_text = textwrap.fill(cleaned_text, width=80)  # Approx. 12 words per line
-                    formatted_text.extend(wrapped_text.split("\n"))  # Store wrapped lines separately
+                    wrapped_text = textwrap.fill(cleaned_text, width=80)
+                    all_content.append(wrapped_text)
 
-            # Format tables properly
-            table_contents = []
+            # Format tables and append them at the end
             for table in document.tables:
                 table_data = [[cell.text.strip() for cell in row.cells] for row in table.rows]
                 formatted_table = tabulate(table_data, headers="firstrow", tablefmt="grid")
-                table_contents.append(formatted_table.split("\n"))  # Ensure multi-line formatting
+                all_content.append(f"\n{formatted_table}\n")
 
             links = {rel_id: rel._target for rel_id, rel in document.part.rels.items() if "hyperlink" in rel.reltype}
 
+            # append the links to the bottom of the document
+            if links:
+                all_content.append("\n**Extracted Links:**")
+                for link in links.values():
+                    all_content.append(f"- {link}")
+
+            # Join everything into ONE string
+            final_markdown = "\n\n".join(all_content)
+
             return {
                 "file": file_path,
-                "text": formatted_text,  # Wrapped paragraphs 
-                "tables": table_contents,  # Tables formatted 
-                "links": list(links.values())
+                "title": file_title,
+                "text": final_markdown, 
             }
         except Exception as x:
             return {"file": file_path, "error": str(x)}
 
     def readpho(self, file_path):
         try:
+            file_title = os.path.splitext(os.path.basename(file_path))[0]
             img = Image.open(file_path).convert("L")
             
             np_img = np.array(img).astype('uint8')
@@ -106,10 +117,11 @@ class Reader:
             headers = ["X Position", "Y Position", "Width", "Height", "Text"]
             table_str = tabulate(table_rows, headers=headers, tablefmt="grid")
 
+            final_markdown=text + "\n\n" + table_str
             return {
                 "file": file_path,
-                "text": text.split("\n"),
-                "tables": table_str
+                "title":file_title,
+                "tables": final_markdown
             }
 
         except Exception as e:

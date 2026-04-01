@@ -1,5 +1,6 @@
 import os
 from orchestrator import run_pipeline
+from datetime import datetime
 
 # Use absolute paths to avoid folder resolution issues
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,4 +20,7 @@ def main():
     run_pipeline(INPUT_DIR, OUTPUT_DIR)
 
 if __name__ == "__main__":
+    start=datetime.now()
     main()
+    end=datetime.now()
+    print(f"time: {end-start}")
