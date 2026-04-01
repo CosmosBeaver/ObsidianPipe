@@ -1,4 +1,3 @@
-import os
 """
     Writes content to a Markdown file.
     
@@ -8,26 +7,13 @@ import os
         content: The raw markdown text.
         images: A list of image filenames associated with this note (optional).
 """
-def write_markdown(output_path: str, title: str, content: str, images: list = None) -> bool:
-   
+import os
+def write_markdown(output_path: str, title: str, content: str) -> bool:
+    """Writes the final string to a Markdown file."""
     try:
-        # Ensure the output directory exists
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
         with open(output_path, 'w', encoding='utf-8') as f:
-            # Write a frontmatter/title header
             f.write(f"# {title}\n\n")
-            
-            # Write the main content
             f.write(content)
-            f.write("\n\n")
-            
-            # Optionally, if you want a footer showing attached images that weren't embedded inline
-            if images:
-                f.write("---\n**Attachments:**\n")
-                for img in images:
-                    f.write(f"![[{img}]]\n")
-                    
         return True
     except Exception as e:
         print(f"Error writing markdown to {output_path}: {e}")

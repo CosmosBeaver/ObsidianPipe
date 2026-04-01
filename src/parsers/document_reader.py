@@ -27,8 +27,13 @@ def process_file(func, path):  # Pre-binding self to the handler
     return (path, result)
 
 class Reader:
-    def __init__(self, folder_path):
+    def __init__(self, folder_path, attachment_dir=None):
         self.folder = folder_path
+        self.attachment_dir = attachment_dir
+        
+        # Ensure attachment directory exists if provided
+        if self.attachment_dir:
+            os.makedirs(self.attachment_dir, exist_ok=True)
         
 
     def readtxt(self, file_path):
@@ -119,11 +124,8 @@ class Reader:
             return True
             
         # If it has an equals sign and multiple operators, treat it as an equation
-        if '=' in text:
-            operator_count = sum(1 for char in text if char in "+-*/^=")
-            if operator_count >= 2:
-                return True
-                
+        if '=' in text and sum(1 for char in text if char in "+-*/^=") >= 2:
+            return True
         return False
     
     def readpdf(self, file_path):
