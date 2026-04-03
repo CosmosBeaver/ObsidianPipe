@@ -1,10 +1,31 @@
 Obsidian pipe
 
-fisiere PDF DOCX DOC EXCEL PPTX plus arhivate 
+fisiere TXT DOC DOCX PPTX PDF EXCEL plus arhivate
 
-[text](https://docs.google.com/document/d/1YTL5-UpWAgekY9-pVhkj84IXCnRbX_D6hcMgXLmBtLE/edit?tab=t.0)
 
-obsidian_converter/
+CE VA FACE APLICATIA:
+
+-va prelua fisiere de tipurile mentionate mai sus dintr un folder “input”
+    optimize for RAM allocation!!!
+    inputul va fi de forma: cursuri, capitole, prezentari, materiale, teme etc
+    (science in particular)
+
+-programul va extrage informatiile din fisiere
+    parallel processing
+
+-acesta le va scrie pe Obsidian (va pastra aceeasi formatare cu cea originala),
+    formatandu le convenabil 
+
+-Va incerca sa lege cuvinte cheie (definitii, capitole, notiuni comune in teoreme) folosind
+"[[...]]" linking-ul nativ Obisidian intre fisiere si in cadrul aceluiasi fisier
+
+-Reverse-engineering formule scrise cu LaTeX pentru a le include in fisierele MD ca text
+    interpretabil de Obsidian
+
+
+File Structure:
+
+ObsidianPipe/
 │
 ├── input_files/              # Put your raw PDFs, PPTXs here
 ├── ObsidianVault/            # The output directory
@@ -32,15 +53,12 @@ obsidian_converter/
 -- TO DO
     _Replacing pdfplumber & Tessaract with MinerU_
     indentare originala (indentare noua Obsidian?)
+    pptx support
     pozele sa fie pe background negru
     fa poza la tabel in loc de a l extrage
-    cum sa se lege de path-ul OCR-ului fara absoulte path
     URASTE diacriticele
-    face poze la tot randu in loc de doar la simboluri
-    setul de is_math_formula sa nu contina litere grecesti, doar operatori si simboluri
     pozele ocupa tot randul in loc sa fie scalate la text
 
 --  Idei
-
         minerU plugin 
 
