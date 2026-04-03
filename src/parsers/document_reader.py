@@ -1,3 +1,4 @@
+
 import os
 import textwrap
 import multiprocessing
@@ -15,9 +16,24 @@ import cv2
 import numpy as np
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
-
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
+'''
+Reader Class:
+    1) parses a file type (see the file_handler at the bottom) 
+    
+    2) extracts content as  
+    
+        "file": file_path,
+        "title": file_title,
+        "text": content
+    
+    to be written using generators/md_builder.py
+    
+    3) transforms path into tasks in a list and 
+       calls multiprocess
+    
+'''
 
 def process_file(func, path):  # Pre-binding self to the handler
     result = func(path)

@@ -1,7 +1,8 @@
 import os
 from parsers.document_reader import Reader
 from generators import md_builder
-# import cpp_linker  # Uncomment when C++ is ready
+# import cpp_linker
+# Uncomment when C++ is ready
 
 def run_pipeline(input_dir, vault_dir):
     notes_dir = os.path.join(vault_dir, "Notes")
@@ -13,13 +14,15 @@ def run_pipeline(input_dir, vault_dir):
 
     # --- PASS 1: Multiprocessing Extraction ---
     print("\n--- Pass 1: Extracting Documents ---")
-    doc_reader = Reader(folder_path=input_dir, attachment_dir=attachments_dir)
     
-    # Run your scanner! It returns a list of tuples: [(filepath, result_dict), ...]
+    doc_reader = Reader(folder_path=input_dir, attachment_dir=attachments_dir)
     raw_results = doc_reader.scanner(input_dir)
     
-    parsed_documents = {}
+    # master_glossary used for creating links in Obsidian between files,
+    # input for cpp_engine
     master_glossary = set()
+    parsed_documents = {}
+     
 
     for filepath, data in raw_results:
         if "error" in data:

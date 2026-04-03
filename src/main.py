@@ -2,7 +2,6 @@ import os
 from orchestrator import run_pipeline
 from datetime import datetime
 
-# Use absolute paths to avoid folder resolution issues
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INPUT_DIR = os.path.join(BASE_DIR, "input_files")
 
