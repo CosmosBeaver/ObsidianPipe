@@ -54,6 +54,7 @@ ObsidianPipe/
     _Replacing pdfplumber & Tessaract with MinerU_
     indentare originala (indentare noua Obsidian?)
     pptx support
+    add timer to terminal wait for processing
     pozele sa fie pe background negru
     fa poza la tabel in loc de a l extrage
     URASTE diacriticele

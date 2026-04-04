@@ -32,7 +32,6 @@ Reader Class:
     
     3) transforms path into tasks in a list and 
        calls multiprocess
-    
 '''
 
 def process_file(func, path):  # Pre-binding self to the handler
@@ -48,12 +47,13 @@ class Reader:
         if self.attachment_dir:
             os.makedirs(self.attachment_dir, exist_ok=True)
         
-
+    
     def readtxt(self, file_path):
         try:
             file_title = os.path.basename(file_path).replace(".txt", "")
             with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
                 content = file.read()
+            
             return {"file": file_path,
                     "title":file_title,
                     "text": content
@@ -88,7 +88,7 @@ class Reader:
                 for link in links.values():
                     all_content.append(f"- {link}")
 
-            # Join everything into ONE string
+            # Join everything into one string
             final_markdown = "\n\n".join(all_content)
 
             return {
@@ -99,6 +99,13 @@ class Reader:
         except Exception as x:
             return {"file": file_path, "error": str(x)}
 
+
+    #Reads photos using OCR logic
+    #TO DO
+    # --slow and not set up for science documents 
+    # --implement minerU from Marker instead
+    # --change logic to parse 2 paragraphs at a time
+        
     def readpho(self, file_path):
         try:
             file_title = os.path.splitext(os.path.basename(file_path))[0]
@@ -141,20 +148,26 @@ class Reader:
 
         except Exception as e:
             return {"file": file_path, "error": str(e)}
-    
+        
+    #TO DO
+    #   it's just bad delete it :)
     def is_math_formula(self, text):
         # Common mathematical and Greek symbols found in formulas
         math_symbols = set("∑∫√±≈≠≡≤≥∈∉⊂⊆∪∩∞αβγδεζηθικλμνξοπρστυφχψωΔΓΘΛΞΠΣΦΨΩ∇∂")
-        
-        # If it contains advanced math symbols, it's almost certainly an equation
+
         if any(char in math_symbols for char in text):
             return True
             
-        # If it has an equals sign and multiple operators, treat it as an equation
+        # Ecuations
         if '=' in text and sum(1 for char in text if char in "+-*/^=") >= 2:
             return True
         return False
-    
+    # TO DO
+    #     --verry long complicated logic
+    #     --replace with minerU
+    #
+    # readpdf -extracts text if there is any
+    #         -else OCR each page 
     def readpdf(self, file_path):
         try:
             all_text = []
@@ -249,9 +262,10 @@ class Reader:
         except Exception as e:
             return {"file": file_path, "error": str(e)}
         
+    # Convert .doc to .docx using antiword
     def readdoc(self, file_path):
         try:
-            # Convert .doc to .docx using antiword
+            
             docx_path = file_path + "x"
 
             if not os.path.exists(docx_path):
@@ -270,8 +284,9 @@ class Reader:
         except Exception as e:
             return {"file": file_path, "error": str(e)}
 
-
-    def scanner(self, folder,use_multiprocessing=True):  # Scan for files
+    # Scan for files recursevly (maintain order),
+    # gets file paths, appends them to a list for multiprocces
+    def scanner(self, folder,use_multiprocessing=True):  
         file_entries, sub_dirs, tasks = [], [], []
         results = []
         processed_files = set()
