@@ -1,7 +1,7 @@
 import os
 from parsers.document_reader import Reader
 from generators import md_builder
-# import cpp_linker
+import cpp_linker
 # Uncomment when C++ is ready
 
 def run_pipeline(input_dir, vault_dir):
@@ -38,16 +38,16 @@ def run_pipeline(input_dir, vault_dir):
         print(f"[SUCCESS] Parsed: {title}")
 
     # --- INITIALIZE C++ ENGINE ---
-    # print(f"\nInitializing C++ Smart Linker with {len(master_glossary)} terms...")
-    # cpp_linker.initialize_search_tree(list(master_glossary))
+    print(f"\nInitializing C++ Smart Linker with {len(master_glossary)} terms...") #ex comment
+    cpp_linker.initialize_search_tree(list(master_glossary)) # ex comment
 
     # --- PASS 2: Linking & Markdown Generation ---
     print("\n--- Pass 2: Building Obsidian Vault ---")
     for title, doc_data in parsed_documents.items():
         raw_text = doc_data.get('text', "")
         
-        # linked_text = cpp_linker.inject_obsidian_links(raw_text)
-        linked_text = raw_text # Placeholder for C++
+        linked_text = cpp_linker.inject_obsidian_links(raw_text) # ex comment
+        # linked_text = raw_text # Placeholder for C++
         
         out_path = os.path.join(notes_dir, f"{title}.md")
         

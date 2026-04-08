@@ -41,7 +41,7 @@ ObsidianPipe/
 │   │   └── md_builder.py
 │   └── orchestrator.py       # Manages the 2-pass processing flow
 │
-├── cpp_engine/               # C++ source code
+├── cpp_engine/               # C++ source code - scans text and turns keywords into native obsidian links
 │   ├── CMakeLists.txt        # Build instructions for C++
 │   ├── smart_linker.cpp      # Your C++ logic (Aho-Corasick, etc.)
 │   └── bindings.cpp          # Pybind11 wrapper code
