@@ -1,22 +1,19 @@
-
 import os
 import textwrap
 import multiprocessing
-import pdfplumber
+import shutil
 from functools import partial
 from docx import Document
 from tabulate import tabulate
-from PIL import Image
-import pytesseract
-from pytesseract import Output
-from langdetect import detect
 import subprocess
 import logging
-import cv2
-import numpy as np
-logging.getLogger("pdfminer").setLevel(logging.ERROR)
+import re
+from paddleocr import PaddleOCR
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+# Initialize PaddleOCR globally so it doesn't reload the AI model for every single image
+logging.getLogger("ppocr").setLevel(logging.ERROR) # Mute PaddleOCR spam
+universal_ocr = PaddleOCR(use_angle_cls=True, lang='ro')
+
 
 '''
 Reader Class:
@@ -98,165 +95,94 @@ class Reader:
             }
         except Exception as x:
             return {"file": file_path, "error": str(x)}
-
-
-    #Reads photos using OCR logic
-    #TO DO
-    # --slow and not set up for science documents 
-    # --implement minerU from Marker instead
-    # --change logic to parse 2 paragraphs at a time
         
     def readpho(self, file_path):
         try:
             file_title = os.path.splitext(os.path.basename(file_path))[0]
-            img = Image.open(file_path).convert("L")
             
-            np_img = np.array(img).astype('uint8')
+            # Use PaddleOCR (MinerU's internal engine)
+            result = universal_ocr.ocr(file_path, cls=True)
             
-            # binarize the image
-            _, thresh = cv2.threshold(np_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            text_lines = []
             
-            processed_img = cv2.medianBlur(thresh, 3)
+            # result[0] contains the list of detected text boxes
+            if result and result[0]: 
+                for line in result[0]:
+                    # PaddleOCR returns data in format: [coordinates, (text, confidence_score)]
+                    text = line[1][0] 
+                    text_lines.append(text)
+                    
+            final_markdown = "\n\n".join(text_lines)
             
-            custom_config = r'--oem 3 --psm 6'  
-            text = pytesseract.image_to_string(processed_img, config=custom_config)
-            if detect(text) == "en":
-                text = pytesseract.image_to_string(processed_img, config=custom_config, lang="eng")
-
-            ocr_data = pytesseract.image_to_data(processed_img, config=custom_config, output_type=Output.DICT)
-            table_rows = []
-            for i in range(len(ocr_data["text"])):
-                if ocr_data["text"][i].strip():  
-                    row = [
-                        ocr_data["left"][i],   
-                        ocr_data["top"][i],    
-                        ocr_data["width"][i],  
-                        ocr_data["height"][i], 
-                        ocr_data["text"][i],   # Detected Text
-                    ]
-                    table_rows.append(row)
-            
-            headers = ["X Position", "Y Position", "Width", "Height", "Text"]
-            table_str = tabulate(table_rows, headers=headers, tablefmt="grid")
-
-            final_markdown=text + "\n\n" + table_str
             return {
                 "file": file_path,
-                "title":file_title,
+                "title": file_title,
                 "text": final_markdown
             }
 
         except Exception as e:
             return {"file": file_path, "error": str(e)}
         
-    #TO DO
-    #   it's just bad delete it :)
-    def is_math_formula(self, text):
-        # Common mathematical and Greek symbols found in formulas
-        math_symbols = set("∑∫√±≈≠≡≤≥∈∉⊂⊆∪∩∞αβγδεζηθικλμνξοπρστυφχψωΔΓΘΛΞΠΣΦΨΩ∇∂")
-
-        if any(char in math_symbols for char in text):
-            return True
-            
-        # Ecuations
-        if '=' in text and sum(1 for char in text if char in "+-*/^=") >= 2:
-            return True
-        return False
-    # TO DO
-    #     --verry long complicated logic
-    #     --replace with minerU
     #
-    # readpdf -extracts text if there is any
-    #         -else OCR each page 
     def readpdf(self, file_path):
         try:
-            all_text = []
             file_title = os.path.basename(file_path).replace(".pdf", "")
             
-            with pdfplumber.open(file_path) as pdf:
-                for page_num, page in enumerate(pdf.pages):
-                    all_text.append(f"\n## Page {page_num+1}\n")
+            # Setup a temporary directory for MinerU output
+            # Same folder as the input file
+            temp_out_dir = os.path.join(os.path.dirname(file_path), f"mineru_temp_{file_title}")
+            os.makedirs(temp_out_dir, exist_ok=True)
+
+            #  Run via subprocess
+            #  Automatically decide between text/OCR mode
+            try:
+                subprocess.run(
+                    ["magic-pdf", "-p", file_path, "-o", temp_out_dir, "-m", "auto"], 
+                    check=True, 
+                    capture_output=True,
+                    text=True
+                )
+            except subprocess.CalledProcessError as e:
+                return {"file": file_path, "error": f"MinerU failed: {e.stderr.decode()}"}
+
+            # Locate the generated Markdown file and Images folder
+            # MinerU creates a subfolder inside the output dir named after the PDF
+            pdf_subfolder = os.path.join(temp_out_dir, file_title)
+            md_file_path = os.path.join(pdf_subfolder, f"{file_title}.md")
+            images_dir = os.path.join(pdf_subfolder, "images")
+
+            if not os.path.exists(md_file_path):
+                 return {"file": file_path, "error": "MinerU did not generate a Markdown file."}
+
+            with open(md_file_path, "r", encoding="utf-8") as f:
+                md_content = f.read()
+
+            # Handle Extracted Images & Obsidian Formatting
+            if os.path.exists(images_dir) and self.attachment_dir:
+                for img_file in os.listdir(images_dir):
+                    src_img_path = os.path.join(images_dir, img_file)
+                    # Prefix the image name so attachments from different PDFs don't overwrite each other
+                    obsidian_img_name = f"{file_title}_{img_file}"
+                    dest_img_path = os.path.join(self.attachment_dir, obsidian_img_name)
                     
-                    # 1. Read line-by-line to get exact coordinates
-                    lines = page.extract_text_lines()
-                    
-                    if lines:
-                        # IT IS A NATIVE PDF
-                        for line in lines:
-                            text = line["text"]
-                            
-                            # Check if the line is a formula!
-                            if self.is_math_formula(text):
-                                # Define the bounding box (adding a 5px padding so we don't cut off tall symbols)
-                                pad = 5
-                                bbox = (
-                                    max(0, line["x0"] - pad), 
-                                    max(0, line["top"] - pad), 
-                                    min(page.width, line["x1"] + pad), 
-                                    min(page.height, line["bottom"] + pad)
-                                )
-                                
-                                try:
-                                    # Crop just the formula and save it!
-                                    cropped_page = page.within_bbox(bbox)
-                                    image_obj = cropped_page.to_image(resolution=300).original
-                                    
-                                    if getattr(self, 'attachment_dir', None):
-                                        img_filename = f"{file_title}_p{page_num+1}_math_{int(line['top'])}.png"
-                                        img_path = os.path.join(self.attachment_dir, img_filename)
-                                        image_obj.save(img_path)
-                                        
-                                        # Inject the picture into Markdown instead of the raw text
-                                        all_text.append(f"\n![[{img_filename}]]\n")
-                                except Exception as e:
-                                    # If cropping fails, fallback to the raw text
-                                    all_text.append(text)
-                            else:
-                                # It's normal text, just append it
-                                all_text.append(text)
-                        
-                        # check for embedded image graphs like before
-                        for img_idx, img in enumerate(page.images):
-                            try:
-                                bbox = (img["x0"], img["top"], img["x1"], img["bottom"])
-                                img_obj = page.within_bbox(bbox).to_image(resolution=300).original
-                                if getattr(self, 'attachment_dir', None):
-                                    img_name = f"{file_title}_p{page_num+1}_graph_{img_idx}.png"
-                                    img_obj.save(os.path.join(self.attachment_dir, img_name))
-                                    all_text.append(f"\n![[{img_name}]]\n")
-                            except Exception:
-                                continue
+                    shutil.move(src_img_path, dest_img_path)
 
-                    else:
-                        # IT IS A SCANNED PDF (No native text lines found)
-                        im = page.to_image(resolution=300).original
-                        temp_path = f"temp_{file_title}_page_{page_num+1}.png"
-                        im.save(temp_path)
+                    # Replace standard Markdown image links with Obsidian wikilinks
+                    # ![](images/image_name.png) -> ![[file_title_image_name.png]] 
+                    old_img_tag = f"images/{img_file}"
+                    md_content = md_content.replace(old_img_tag, obsidian_img_name)
+            
+            # Convert standard markdown image syntax ![alt](filename) to Obsidian ![[filename]]
+            # This regex catches any remaining standard image links
+            md_content = re.sub(r'!\[.*?\]\((.*?)\)', r'![[\1]]', md_content)
 
-                        # Run standard OCR for the text
-                        ocr_result = self.readpho(temp_path)
-                        all_text.extend(ocr_result.get("text", ["OCR error"]))
-
-                        # Keep the whole scanned page image as a fallback for the math
-                        if getattr(self, 'attachment_dir', None):
-                            img_filename = f"{file_title}_scanned_p{page_num+1}.png"
-                            obsidian_img_path = os.path.join(self.attachment_dir, img_filename)
-                            os.rename(temp_path, obsidian_img_path) 
-                            all_text.append(f"\n![[{img_filename}]]\n")
-                        else:
-                            os.remove(temp_path)
-
-                    # 3. Extract Tables
-                    tables = page.extract_tables()
-                    for table in tables:
-                        if table:
-                            formatted_table = tabulate(table)
-                            all_text.append(f"\n{formatted_table}\n")
+            # Cleanup temporary MinerU directory
+            shutil.rmtree(temp_out_dir, ignore_errors=True)
 
             return {
                 "file": file_path,
                 "title": file_title,
-                "text": "\n".join(all_text)
+                "text": md_content
             }
 
         except Exception as e:
@@ -309,7 +235,8 @@ class Reader:
 
         try:
             if use_multiprocessing and tasks:
-                with multiprocessing.Pool(processes=os.cpu_count()) as pool:
+                # Default to 2 workers to prevent system crashes on heavy ML tasks.
+                with multiprocessing.Pool(processes=2) as pool:
                     results = pool.starmap(process_file, tasks)
             else:
                 for task in tasks:
