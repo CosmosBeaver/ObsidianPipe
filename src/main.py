@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INPUT_DIR = os.path.join(BASE_DIR, "input_files")
 
 #mihai modifica si tu ca mi e lene sa implementez altceva inafara de hardcodare
-OUTPUT_DIR = r"C:\Users\colco\Documents\obisidian\ObsidianVault"
+OUTPUT_DIR = r"C:\Users\colco\Documents\GitHub\ObsidianPipe\test_output"
 
 def main():
     print("========================================")
