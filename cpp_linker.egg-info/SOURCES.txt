@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+cpp_engine/bindings.cpp
+cpp_engine/smart_linker.cpp
+cpp_linker.egg-info/PKG-INFO
+cpp_linker.egg-info/SOURCES.txt
+cpp_linker.egg-info/dependency_links.txt
+cpp_linker.egg-info/top_level.txt

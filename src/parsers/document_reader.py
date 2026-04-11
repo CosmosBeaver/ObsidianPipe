@@ -1,4 +1,5 @@
 import os
+import site
 import textwrap
 import multiprocessing
 import shutil
@@ -9,6 +10,39 @@ import subprocess
 import logging
 import re
 from paddleocr import PaddleOCR
+import spacy
+
+# NLP = neuro lingvistic programming - will extract keywords (with special romanian characters) and return a list with them
+try:
+    nlp_model = spacy.load("ro_core_news_sm")
+except OSError:
+    print("[Warning] spaCy was not found. The keywords will not be extracted")
+    nlp_model = None
+
+def extract_nlp_concepts(text):
+    """
+    Extracts relevant entities and groups of keywords from the text 
+    """
+    if not nlp_model or not text.strip():
+        return []
+
+    doc = nlp_model(text)
+    keywords = set()
+    
+    # Extracting named entities (names of people, organizations, locations)
+    for ent in doc.ents:
+        # We keep entities longer than 3 characters
+        if len(ent.text) > 3:
+            keywords.add(ent.text.strip())
+            
+    # Extracting "Noun Chunks" (nouns and their atributes)
+    for chunk in doc.noun_chunks:
+        # We filter syntaxes that are too short or too long to be "concepts"
+        if 4 <= len(chunk.text) <= 35:
+            keywords.add(chunk.text.strip())
+            
+    return list(keywords)
+
 
 # Initialize PaddleOCR globally so it doesn't reload the AI model for every single image
 logging.getLogger("ppocr").setLevel(logging.ERROR) # Mute PaddleOCR spam
@@ -23,7 +57,8 @@ Reader Class:
     
         "file": file_path,
         "title": file_title,
-        "text": content
+        "text": content,
+        "keywords": concepts
     
     to be written using generators/md_builder.py
     
@@ -51,9 +86,12 @@ class Reader:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
                 content = file.read()
             
+            concepts = extract_nlp_concepts
+            
             return {"file": file_path,
                     "title":file_title,
-                    "text": content
+                    "text": content,
+                    "keywords": concepts
             }
         except Exception as x:
             return {"file": file_path, "error": str(x)}
@@ -87,11 +125,14 @@ class Reader:
 
             # Join everything into one string
             final_markdown = "\n\n".join(all_content)
-
+            
+            concepts = extract_nlp_concepts
+            
             return {
                 "file": file_path,
                 "title": file_title,
-                "text": final_markdown, 
+                "text": final_markdown,
+                "keywords": concepts 
             }
         except Exception as x:
             return {"file": file_path, "error": str(x)}
@@ -114,10 +155,13 @@ class Reader:
                     
             final_markdown = "\n\n".join(text_lines)
             
+            concepts = extract_nlp_concepts
+            
             return {
                 "file": file_path,
                 "title": file_title,
-                "text": final_markdown
+                "text": final_markdown,
+                "keywords": concepts
             }
 
         except Exception as e:
@@ -136,23 +180,34 @@ class Reader:
             #  Run via subprocess
             #  Automatically decide between text/OCR mode
             try:
+                user_scripts_dir = os.path.join(site.USER_BASE, "Scripts")
+                magic_pdf_exe = os.path.join(user_scripts_dir, "magic-pdf.exe")
+                
+                if not os.path.exists(magic_pdf_exe):
+                    magic_pdf_exe = r"C:\Users\Mihai\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts\magic-pdf.exe"
+                    
                 subprocess.run(
-                    ["magic-pdf", "-p", file_path, "-o", temp_out_dir, "-m", "auto"], 
+                    ["magic-pdf.exe", "-p", file_path, "-o", temp_out_dir, "-m", "auto"], 
                     check=True, 
                     capture_output=True,
-                    text=True
+                    text=True,
                 )
             except subprocess.CalledProcessError as e:
-                return {"file": file_path, "error": f"MinerU failed: {e.stderr.decode()}"}
+                return {"file": file_path, "error": f"MinerU failed: {e.stderr}"}
 
             # Locate the generated Markdown file and Images folder
             # MinerU creates a subfolder inside the output dir named after the PDF
-            pdf_subfolder = os.path.join(temp_out_dir, file_title)
-            md_file_path = os.path.join(pdf_subfolder, f"{file_title}.md")
-            images_dir = os.path.join(pdf_subfolder, "images")
+            import glob
+            md_files = glob.glob(os.path.join(temp_out_dir, "**", "*.md"), recursive=True)
 
-            if not os.path.exists(md_file_path):
-                 return {"file": file_path, "error": "MinerU did not generate a Markdown file."}
+            if not md_files:
+                 # If the code crashes, it will show us which file messed with MinerU
+                 found_content = os.listdir(temp_out_dir) if os.path.exists(temp_out_dir) else "Empty file"
+                 return {"file": file_path, "error": f"MinerU did not generate MD. It only saved: {found_content}"}
+
+            md_file_path = md_files[0] # Îl luăm pe primul găsit
+            pdf_subfolder = os.path.dirname(md_file_path)
+            images_dir = os.path.join(pdf_subfolder, "images")
 
             with open(md_file_path, "r", encoding="utf-8") as f:
                 md_content = f.read()
@@ -179,10 +234,13 @@ class Reader:
             # Cleanup temporary MinerU directory
             shutil.rmtree(temp_out_dir, ignore_errors=True)
 
+            concepts = extract_nlp_concepts
+            
             return {
                 "file": file_path,
                 "title": file_title,
-                "text": md_content
+                "text": md_content,
+                "keywords": concepts
             }
 
         except Exception as e:

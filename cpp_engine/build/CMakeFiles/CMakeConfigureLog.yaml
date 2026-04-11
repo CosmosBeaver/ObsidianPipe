@@ -1,0 +1,2361 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.5.0+994b5faf9 for .NET Framework
+      Build started 4/11/2026 12:41:34 AM.
+      
+      Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.84
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/4.3.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link.com"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link.exe"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/MinGW/bin/lld-link.com"
+      - "C:/MinGW/bin/lld-link.exe"
+      - "C:/MinGW/bin/lld-link"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link.com"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link.exe"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link"
+      - "C:/Program Files/Tesseract-OCR/lld-link.com"
+      - "C:/Program Files/Tesseract-OCR/lld-link.exe"
+      - "C:/Program Files/Tesseract-OCR/lld-link"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/mt.com"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/mt.exe"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/mt"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/mt"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/mt"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/mt.com"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/mt"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/mt"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/mt"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/mt.com"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/mt"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/mt"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/mt"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/mt.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/mt.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/mt"
+      - "C:/MinGW/bin/mt.com"
+      - "C:/MinGW/bin/mt.exe"
+      - "C:/MinGW/bin/mt"
+      - "C:/Users/Mihai/.dotnet/tools/mt.com"
+      - "C:/Users/Mihai/.dotnet/tools/mt.exe"
+      - "C:/Users/Mihai/.dotnet/tools/mt"
+      - "C:/Program Files/Tesseract-OCR/mt.com"
+      - "C:/Program Files/Tesseract-OCR/mt.exe"
+      - "C:/Program Files/Tesseract-OCR/mt"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/mt.com"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/mt.exe"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.5.0+994b5faf9 for .NET Framework
+      Build started 4/11/2026 12:41:35 AM.
+      
+      Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.89
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/4.3.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link.com"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link.exe"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/lld-link"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/lld-link"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/lld-link"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/CMake/bin/lld-link.com"
+      - "C:/Program Files/CMake/bin/lld-link.exe"
+      - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/MinGW/bin/lld-link.com"
+      - "C:/MinGW/bin/lld-link.exe"
+      - "C:/MinGW/bin/lld-link"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link.com"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link.exe"
+      - "C:/Users/Mihai/.dotnet/tools/lld-link"
+      - "C:/Program Files/Tesseract-OCR/lld-link.com"
+      - "C:/Program Files/Tesseract-OCR/lld-link.exe"
+      - "C:/Program Files/Tesseract-OCR/lld-link"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.com"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link.exe"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake:592 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/cpp_engine/bin/"
+      - "C:/Program Files (x86)/cpp_engine/sbin/"
+      - "C:/Program Files (x86)/cpp_engine/"
+    searched_directories:
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/rc.com"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/rc.exe"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/rc"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc.com"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc.exe"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/rc"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc.com"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc.exe"
+      - "C:/Program Files/Razer Chroma SDK/bin/rc"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/rc.com"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/rc"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc.com"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc.exe"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/rc"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc.com"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc.exe"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/rc"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/rc.com"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/rc"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/rc"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/rc"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/rc.com"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/rc.exe"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/rc"
+      - "C:/MinGW/bin/rc.com"
+      - "C:/MinGW/bin/rc.exe"
+      - "C:/MinGW/bin/rc"
+      - "C:/Users/Mihai/.dotnet/tools/rc.com"
+      - "C:/Users/Mihai/.dotnet/tools/rc.exe"
+      - "C:/Users/Mihai/.dotnet/tools/rc"
+      - "C:/Program Files/Tesseract-OCR/rc.com"
+      - "C:/Program Files/Tesseract-OCR/rc.exe"
+      - "C:/Program Files/Tesseract-OCR/rc"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/rc.com"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/rc.exe"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/cpp_engine/bin/rc.com"
+      - "C:/Program Files (x86)/cpp_engine/bin/rc.exe"
+      - "C:/Program Files (x86)/cpp_engine/bin/rc"
+      - "C:/Program Files (x86)/cpp_engine/sbin/rc.com"
+      - "C:/Program Files (x86)/cpp_engine/sbin/rc.exe"
+      - "C:/Program Files (x86)/cpp_engine/sbin/rc"
+      - "C:/Program Files (x86)/cpp_engine/rc.com"
+      - "C:/Program Files (x86)/cpp_engine/rc.exe"
+      - "C:/Program Files (x86)/cpp_engine/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-9ko26m"
+      binary: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-9ko26m"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-9ko26m'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Insiders/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3f97b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.5.0+994b5faf9 for .NET Framework
+        Build started 4/11/2026 12:41:36 AM.
+        
+        Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ko26m\\cmTC_3f97b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ko26m\\Debug\\".
+          Creating directory "cmTC_3f97b.dir\\Debug\\cmTC_3f97b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_3f97b.dir\\Debug\\cmTC_3f97b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_3f97b.dir\\Debug\\cmTC_3f97b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_3f97b.dir\\Debug\\\\" /Fd"cmTC_3f97b.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35726 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_3f97b.dir\\Debug\\\\" /Fd"cmTC_3f97b.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ko26m\\Debug\\cmTC_3f97b.exe" /INCREMENTAL /ILK:"cmTC_3f97b.dir\\Debug\\cmTC_3f97b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-9ko26m/Debug/cmTC_3f97b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-9ko26m/Debug/cmTC_3f97b.lib" /MACHINE:X64  /machine:x64 cmTC_3f97b.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_3f97b.vcxproj -> C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ko26m\\Debug\\cmTC_3f97b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_3f97b.dir\\Debug\\cmTC_3f97b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_3f97b.dir\\Debug\\cmTC_3f97b.tlog\\cmTC_3f97b.lastbuildstate".
+        Done Building Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ko26m\\cmTC_3f97b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.82
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35726.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-nryhr2"
+      binary: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-nryhr2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-nryhr2'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Insiders/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_86e2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.5.0+994b5faf9 for .NET Framework
+        Build started 4/11/2026 12:41:37 AM.
+        
+        Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nryhr2\\cmTC_86e2a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nryhr2\\Debug\\".
+          Creating directory "cmTC_86e2a.dir\\Debug\\cmTC_86e2a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_86e2a.dir\\Debug\\cmTC_86e2a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_86e2a.dir\\Debug\\cmTC_86e2a.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_86e2a.dir\\Debug\\\\" /Fd"cmTC_86e2a.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35726 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_86e2a.dir\\Debug\\\\" /Fd"cmTC_86e2a.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nryhr2\\Debug\\cmTC_86e2a.exe" /INCREMENTAL /ILK:"cmTC_86e2a.dir\\Debug\\cmTC_86e2a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-nryhr2/Debug/cmTC_86e2a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-nryhr2/Debug/cmTC_86e2a.lib" /MACHINE:X64  /machine:x64 cmTC_86e2a.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_86e2a.vcxproj -> C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nryhr2\\Debug\\cmTC_86e2a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_86e2a.dir\\Debug\\cmTC_86e2a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_86e2a.dir\\Debug\\cmTC_86e2a.tlog\\cmTC_86e2a.lastbuildstate".
+        Done Building Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nryhr2\\cmTC_86e2a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.85
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35726.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:2563 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.12_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/"
+    searched_directories:
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:3331 (find_library)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "library"
+    variable: "_Python3_LIBRARY_RELEASE"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python312"
+      - "python3.12"
+    candidate_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/lib/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/lib/python3.12/config-3.12/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/"
+    searched_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/lib/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/lib/"
+    found: "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/python312.lib"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "C:/Program Files (x86)/cpp_engine/bin"
+        - "C:/Program Files/CMake/bin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:3519 (find_library)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "library"
+    variable: "_Python3_LIBRARY_DEBUG"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python312_d"
+    candidate_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+    searched_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "C:/Program Files (x86)/cpp_engine/bin"
+        - "C:/Program Files/CMake/bin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:1483 (find_library)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:3537 (_python_find_runtime_library)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "library"
+    variable: "_Python3_RUNTIME_LIBRARY_RELEASE"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python312"
+      - "python3.12"
+    candidate_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/bin/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/bin/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/bin/"
+      - "C:/Users/Mihai/.vscode/extensions/vadimcn.vscode-lldb-1.12.1/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bin/"
+      - "C:/Users/Mihai/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/bin/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/bin/"
+      - "C:/Program Files (x86)/Razer Chroma SDK/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/bin/"
+      - "C:/Program Files/Razer Chroma SDK/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/bin/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/bin/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/bin/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/bin/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/bin/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/bin/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "C:/Program Files/dotnet/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/bin/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/bin/"
+      - "C:/Windows/System32/config/systemprofile/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/bin/"
+      - "C:/Program Files (x86)/Razer/ChromaBroadcast/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/bin/"
+      - "C:/Program Files/Razer/ChromaBroadcast/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/bin/"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/bin/"
+      - "C:/Users/Mihai/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/CMake/bin/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/bin/"
+      - "C:/Users/Mihai/AppData/Local/Programs/Python/Launcher/"
+      - "C:/MinGW/bin/bin/"
+      - "C:/MinGW/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/bin/"
+      - "C:/Users/Mihai/.dotnet/tools/"
+      - "C:/Program Files/Tesseract-OCR/bin/"
+      - "C:/Program Files/Tesseract-OCR/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/bin/"
+      - "C:/Users/Mihai/.vscode/extensions/ms-python.debugpy-2025.18.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/lib/bin/"
+      - "C:/Program Files/lib/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/lib/bin/"
+      - "C:/Program Files (x86)/lib/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/lib/bin/"
+      - "C:/Program Files/CMake/lib/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/cpp_engine/lib/bin/"
+      - "C:/Program Files (x86)/cpp_engine/lib/"
+      - "C:/Program Files (x86)/cpp_engine/bin/"
+      - "C:/Program Files (x86)/cpp_engine/"
+      - "C:/Program Files (x86)/cpp_engine/bin/bin/"
+      - "C:/Program Files (x86)/cpp_engine/bin/"
+      - "/bin/bin/"
+      - "/bin/"
+    searched_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/bin/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/bin/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/libs/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/bin/"
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/bin/"
+    found: "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/python312.dll"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "C:/Program Files (x86)/cpp_engine/bin"
+        - "C:/Program Files/CMake/bin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython/Support.cmake:3846 (find_path)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "path"
+    variable: "_Python3_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "Python.h"
+    candidate_directories:
+      - "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/Include/"
+    found: "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0/Include/"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/cpp_engine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
+      - "C:/Users/Mihai/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:332 (check_cxx_compiler_flag)"
+      - "C:/Users/Mihai/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:404 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "C:/Users/Mihai/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:438 (_pybind11_generate_lto)"
+      - "C:/Users/Mihai/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake:257 (include)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Performing Test HAS_MSVC_GL_LTCG"
+    directories:
+      source: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-yhv63h"
+      binary: "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-yhv63h"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "HAS_MSVC_GL_LTCG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-yhv63h'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Insiders/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_90a0c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.5.0+994b5faf9 for .NET Framework
+        Build started 4/11/2026 12:41:46 AM.
+        
+        Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\cmTC_90a0c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\Debug\\".
+          Creating directory "cmTC_90a0c.dir\\Debug\\cmTC_90a0c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_90a0c.dir\\Debug\\cmTC_90a0c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_90a0c.dir\\Debug\\cmTC_90a0c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_90a0c.dir\\Debug\\\\" /Fd"cmTC_90a0c.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\src.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35726 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_90a0c.dir\\Debug\\\\" /Fd"cmTC_90a0c.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\Debug\\cmTC_90a0c.exe" /INCREMENTAL /ILK:"cmTC_90a0c.dir\\Debug\\cmTC_90a0c.ilk" /NOLOGO "-LTCG" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-yhv63h/Debug/cmTC_90a0c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Mihai/Documents/GitHub/ObsidianPipe/cpp_engine/build/CMakeFiles/CMakeScratch/TryCompile-yhv63h/Debug/cmTC_90a0c.lib" /MACHINE:X64  /machine:x64 cmTC_90a0c.dir\\Debug\\src.obj
+        LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\cmTC_90a0c.vcxproj]
+          Generating code
+          Finished generating code
+          cmTC_90a0c.vcxproj -> C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\Debug\\cmTC_90a0c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_90a0c.dir\\Debug\\cmTC_90a0c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_90a0c.dir\\Debug\\cmTC_90a0c.tlog\\cmTC_90a0c.lastbuildstate".
+        Done Building Project "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\cmTC_90a0c.vcxproj" (default targets).
+        
+        Build succeeded.
+        
+        "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\cmTC_90a0c.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification [C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\cpp_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yhv63h\\cmTC_90a0c.vcxproj]
+        
+            1 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.83
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/venv/Lib/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython/Support.cmake:2563 (find_program)"
+      - "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/venv/Lib/site-packages/cmake/data/share/cmake-4.3/Modules/FindPython3.cmake:671 (include)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE_DEBUG"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.15_d"
+      - "python3.14_d"
+      - "python3.13_d"
+      - "python3.12_d"
+      - "python3.11_d"
+      - "python3.10_d"
+      - "python3.9_d"
+      - "python3.8_d"
+      - "python3.7_d"
+      - "python3.6_d"
+      - "python3.5_d"
+      - "python3.4_d"
+      - "python3.3_d"
+      - "python3.2_d"
+      - "python3.1_d"
+      - "python3.0_d"
+      - "python3_d"
+      - "python_d"
+    candidate_directories:
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/"
+    searched_directories:
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.15_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.15_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.15_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.14_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.14_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.14_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.13_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.13_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.13_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.12_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.11_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.11_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.11_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.10_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.10_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.10_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.9_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.9_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.9_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.8_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.8_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.8_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.7_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.7_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.7_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.6_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.6_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.6_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.5_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.5_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.5_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.4_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.4_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.4_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.3_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.3_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.3_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.2_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.2_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.2_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.1_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.1_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.1_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.0_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.0_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3.0_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python3_d"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d.com"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d.exe"
+      - "C:/Users/Mihai/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python_d"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\Mihai\\Documents\\GitHub\\ObsidianPipe\\venv\\Scripts"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.1\\bin"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Mihai\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Program Files (x86)\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files\\Razer Chroma SDK\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Program Files\\Razer\\ChromaBroadcast\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\Mihai\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Mihai\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\MinGW\\bin"
+        - "C:\\Users\\Mihai\\.dotnet\\tools"
+        - "C:\\Program Files\\Tesseract-OCR"
+        - "c:\\Users\\Mihai\\.vscode\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cpp_engine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Users/Mihai/Documents/GitHub/ObsidianPipe/venv/Lib/site-packages/cmake/data"
+        - "C:/Program Files (x86)/cpp_engine"
+...

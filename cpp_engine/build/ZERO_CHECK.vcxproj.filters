@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mihai\Documents\GitHub\ObsidianPipe\cpp_engine\build\CMakeFiles\dc89bab5355a291a42d4a28b8819162c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E5AB7035-2BB6-391E-BAAA-12B5BD18A43A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

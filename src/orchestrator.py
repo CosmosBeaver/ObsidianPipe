@@ -20,7 +20,7 @@ def run_pipeline(input_dir, vault_dir):
     
     # master_glossary used for creating links in Obsidian between files,
     # input for cpp_engine
-    master_glossary = set()
+    master_glossary = {}
     parsed_documents = {}
      
 
@@ -33,13 +33,15 @@ def run_pipeline(input_dir, vault_dir):
         parsed_documents[title] = data
         
         if "keywords" in data:
-            master_glossary.update(data["keywords"])
+            for kw in data["keywords"]:
+                if kw not in master_glossary:
+                    master_glossary[kw] = title
             
         print(f"[SUCCESS] Parsed: {title}")
 
     # --- INITIALIZE C++ ENGINE ---
     print(f"\nInitializing C++ Smart Linker with {len(master_glossary)} terms...") #ex comment
-    cpp_linker.initialize_search_tree(list(master_glossary)) # ex comment
+    cpp_linker.initialize_search_tree(master_glossary) # ex comment
 
     # --- PASS 2: Linking & Markdown Generation ---
     print("\n--- Pass 2: Building Obsidian Vault ---")

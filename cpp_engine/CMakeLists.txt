@@ -1,17 +1,22 @@
 cmake_minimum_required(VERSION 3.15)
 project(cpp_engine)
 
-# Searching Pybind11
-find_package(pybind11 REQUIRED)
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-# Creating cpp_linker from the two source files
+execute_process(
+    COMMAND ${Python3_EXECUTABLE} -c "import pybind11; print(pybind11.get_cmake_dir())"
+    OUTPUT_VARIABLE pybind11_DIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+find_package(pybind11 REQUIRED PATHS ${pybind11_DIR})
+
 pybind11_add_module(cpp_linker smart_linker.cpp bindings.cpp)
 
 set_target_properties(cpp_linker PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src)"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src"
     LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/../src"
     LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/../src"
 )
 
-# Optimization for performance while parsing text
-target_compie_options(cpp_linker PRIVATE -03 -std=c++17)
+target_compile_options(cpp_linker PRIVATE -O3 -std=c++17)
