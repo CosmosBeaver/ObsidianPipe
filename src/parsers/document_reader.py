@@ -15,6 +15,25 @@ import re
 from paddleocr import PaddleOCR
 import tempfile
 
+# --- DIACRITIC FAST-MAPPING ---
+DIACRITIC_MAP = {
+    ',s': 'ș', ',S': 'Ș',
+    ',t': 'ț', ',T': 'Ț',
+    '~s': 'ș', '~t': 'ț',
+    's¸': 'ș', 'S¸': 'Ș',
+    't¸': 'ț', 'T¸': 'Ț',
+    'ˆı': 'î', 'ıˆ': 'î',
+    'ˆI': 'Î', 'Iˆ': 'Î',
+    'ˆa': 'â', 'ˆA': 'Â',
+    'aˆ': 'â', 'Aˆ': 'Â',
+    '˘a': 'ă', '˘A': 'Ă',
+    'a˘': 'ă', 'A˘': 'Ă'
+}
+
+# This builds a single regex pattern matching ANY of the keys above:
+# Result looks like: (,s|,S|,t|,T|~s|...|A˘)
+DIACRITIC_PATTERN = re.compile("|".join(map(re.escape, DIACRITIC_MAP.keys())))
+
 # Initialize PaddleOCR globally so it doesn't reload the AI model for every single image
 logging.getLogger("ppocr").setLevel(logging.ERROR) # Mute PaddleOCR spam
 
@@ -128,16 +147,6 @@ class Reader:
                 for line in result[0]:
                     # PaddleOCR returns data in format: [coordinates, (text, confidence_score)]
                     text = line[1][0] 
-                    # --- DIACRITIC POST-PROCESSING ---
-                    text = text.replace(',s', 'ș').replace(',S', 'Ș')
-                    text = text.replace(',t', 'ț').replace(',T', 'Ț')
-                    text = text.replace('~s', 'ș').replace('~t', 'ț')
-                    text = text.replace('˘a', 'ă').replace('˘A', 'Ă')
-                    text = text.replace('a˘', 'ă').replace('A˘', 'Ă') # Just in case it flips them
-                    text = text.replace('ıˆ', 'î').replace('ˆı', 'î')
-                    text = text.replace('Iˆ', 'Î').replace('ˆI', 'Î')
-                    text = text.replace('ˆa', 'â').replace('ˆA', 'Â')
-                    text = text.replace('aˆ', 'â').replace('Aˆ', 'Â')
                     text_lines.append(text)
                     
             final_markdown = "\n\n".join(text_lines)
@@ -159,23 +168,13 @@ class Reader:
             os.makedirs(temp_out_dir, exist_ok=True)
 
             try:
-                # Run MinerU and capture the output
-                mineru_process = subprocess.run(
+                # This allows MinerU's live progress bars to render beautifully in the terminal!
+                subprocess.run(
                     ["magic-pdf", "-p", file_path, "-o", temp_out_dir, "-m", "auto"], 
-                    check=True, 
-                    capture_output=True,
-                    text=True
+                    check=True
                 )
-                
-                # --- NEW: Print exactly what MinerU did ---
-                print(f"\n[DEBUG] MinerU Output for {file_title}:")
-                print(mineru_process.stdout)
-                if mineru_process.stderr:
-                    print(f"[DEBUG] MinerU Warnings/Errors: {mineru_process.stderr}")
-                print("-" * 40)
-                
-            except subprocess.CalledProcessError as e:
-                return {"file": file_path, "error": f"MinerU failed: {e.stderr}"}
+            except subprocess.CalledProcessError:
+                return {"file": file_path, "error": "MinerU encountered an error during execution."}
 
             md_file_path = None
             images_dir = None
@@ -190,11 +189,12 @@ class Reader:
                     break
 
             if not md_file_path or not os.path.exists(md_file_path):
-                 # --- NEW: Do NOT delete the temp folder if it fails so we can inspect it manually ---
                  return {"file": file_path, "error": f"No .md file found. Go check the folder: {temp_out_dir}"}
 
             with open(md_file_path, "r", encoding="utf-8") as f:
                 md_content = f.read()
+
+            md_content = DIACRITIC_PATTERN.sub(lambda match: DIACRITIC_MAP[match.group(0)], md_content)
 
             if images_dir and os.path.exists(images_dir) and self.attachment_dir:
                 for img_file in os.listdir(images_dir):
@@ -219,7 +219,6 @@ class Reader:
 
         except Exception as e:
             return {"file": file_path, "error": str(e)}
-        
     # Convert .doc to .docx using antiword
     def readdoc(self, file_path):
         try:
