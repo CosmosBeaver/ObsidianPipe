@@ -13,6 +13,7 @@ import subprocess
 import logging
 import re
 from paddleocr import PaddleOCR
+import tempfile
 
 # Initialize PaddleOCR globally so it doesn't reload the AI model for every single image
 logging.getLogger("ppocr").setLevel(logging.ERROR) # Mute PaddleOCR spam
@@ -154,64 +155,60 @@ class Reader:
     def readpdf(self, file_path):
         try:
             file_title = os.path.basename(file_path).replace(".pdf", "")
-            
-            # Setup a temporary directory for MinerU output
-            # Same folder as the input file
-            temp_out_dir = os.path.join(os.path.dirname(file_path), f"mineru_temp_{file_title}")
+            temp_out_dir = os.path.join(tempfile.gettempdir(), f"mineru_temp_{file_title}")
             os.makedirs(temp_out_dir, exist_ok=True)
 
-            #  Run via subprocess
-            #  Automatically decide between text/OCR mode
             try:
-                subprocess.run(
+                # Run MinerU and capture the output
+                mineru_process = subprocess.run(
                     ["magic-pdf", "-p", file_path, "-o", temp_out_dir, "-m", "auto"], 
                     check=True, 
                     capture_output=True,
                     text=True
                 )
+                
+                # --- NEW: Print exactly what MinerU did ---
+                print(f"\n[DEBUG] MinerU Output for {file_title}:")
+                print(mineru_process.stdout)
+                if mineru_process.stderr:
+                    print(f"[DEBUG] MinerU Warnings/Errors: {mineru_process.stderr}")
+                print("-" * 40)
+                
             except subprocess.CalledProcessError as e:
-                return {"file": file_path, "error": f"MinerU failed: {e.stderr.decode()}"}
+                return {"file": file_path, "error": f"MinerU failed: {e.stderr}"}
 
-            # Locate the generated Markdown file and Images folder
-            # MinerU creates a subfolder inside the output dir named after the PDF
-            # Safely search the entire temporary directory for the generated .md file
             md_file_path = None
             images_dir = None
-            for root, dirs, files in os.walk(temp_out_dir):
+            
+            for root, _, files in os.walk(temp_out_dir):
                 for file in files:
-                    if file.endswith(".md"):
+                    if file.endswith('.md'):
                         md_file_path = os.path.join(root, file)
                         images_dir = os.path.join(root, "images")
                         break
-                if md_file_path:
+                if md_file_path: 
                     break
 
             if not md_file_path or not os.path.exists(md_file_path):
-                 return {"file": file_path, "error": "MinerU did not generate a Markdown file. It may have crashed internally."}
+                 # --- NEW: Do NOT delete the temp folder if it fails so we can inspect it manually ---
+                 return {"file": file_path, "error": f"No .md file found. Go check the folder: {temp_out_dir}"}
 
             with open(md_file_path, "r", encoding="utf-8") as f:
                 md_content = f.read()
 
-            # Handle Extracted Images & Obsidian Formatting
-            if os.path.exists(images_dir) and self.attachment_dir:
+            if images_dir and os.path.exists(images_dir) and self.attachment_dir:
                 for img_file in os.listdir(images_dir):
                     src_img_path = os.path.join(images_dir, img_file)
-                    # Prefix the image name so attachments from different PDFs don't overwrite each other
                     obsidian_img_name = f"{file_title}_{img_file}"
                     dest_img_path = os.path.join(self.attachment_dir, obsidian_img_name)
-                    
                     shutil.move(src_img_path, dest_img_path)
-
-                    # Replace standard Markdown image links with Obsidian wikilinks
-                    # ![](images/image_name.png) -> ![[file_title_image_name.png]] 
+                    
                     old_img_tag = f"images/{img_file}"
                     md_content = md_content.replace(old_img_tag, obsidian_img_name)
             
-            # Convert standard markdown image syntax ![alt](filename) to Obsidian ![[filename]]
-            # This regex catches any remaining standard image links
             md_content = re.sub(r'!\[.*?\]\((.*?)\)', r'![[\1]]', md_content)
 
-            # Cleanup temporary MinerU directory
+            # Cleanup only on success
             shutil.rmtree(temp_out_dir, ignore_errors=True)
 
             return {
