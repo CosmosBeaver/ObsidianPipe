@@ -41,7 +41,7 @@ ObsidianPipe/
 │   │   └── md_builder.py
 │   └── orchestrator.py       # Manages the 2-pass processing flow
 │
-├── cpp_engine/               # C++ source code - scans text and turns keywords into native obsidian links
+├── cpp_engine/               # C++ source code
 │   ├── CMakeLists.txt        # Build instructions for C++
 │   ├── smart_linker.cpp      # Your C++ logic (Aho-Corasick, etc.)
 │   └── bindings.cpp          # Pybind11 wrapper code
@@ -51,15 +51,10 @@ ObsidianPipe/
 
 
 -- TO DO
-    _Replacing pdfplumber & Tessaract with MinerU_
     indentare originala (indentare noua Obsidian?)
-    pptx support
-    add timer to terminal wait for processing
-    pozele sa fie pe background negru
-    fa poza la tabel in loc de a l extrage
+    pptx, excel support
+    add timer to terminal wait for processing -- CLI
     URASTE diacriticele
-    pozele ocupa tot randul in loc sa fie scalate la text
 
 --  Idei
-        minerU plugin 
 

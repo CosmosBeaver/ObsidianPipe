@@ -1,4 +1,8 @@
 import os
+# Stop PaddleOCR from pinging servers on startup
+os.environ["PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK"] = "True"
+from datetime import datetime
+from tqdm import tqdm
 import textwrap
 import multiprocessing
 import shutil
@@ -12,9 +16,22 @@ from paddleocr import PaddleOCR
 
 # Initialize PaddleOCR globally so it doesn't reload the AI model for every single image
 logging.getLogger("ppocr").setLevel(logging.ERROR) # Mute PaddleOCR spam
-universal_ocr = PaddleOCR(use_angle_cls=True, lang='ro')
 
 
+# It will only initialize the first time an image is processed
+_ocr_instance=None
+def get_ocr():
+    global _ocr_instance
+    if _ocr_instance is None:
+        _ocr_instance = PaddleOCR(use_angle_cls=True, lang='ro')
+    return _ocr_instance
+# terminal progression bar
+def _process_wrapper(args):
+    func, instance, path = args
+    print(f"\n⏳ [{datetime.now().strftime('%H:%M:%S')}] Started: {os.path.basename(path)}")
+    res = func(instance, path)
+    print(f"✅ [{datetime.now().strftime('%H:%M:%S')}] Finished: {os.path.basename(path)}")
+    return (path, res)
 '''
 Reader Class:
     1) parses a file type (see the file_handler at the bottom) 
@@ -101,7 +118,7 @@ class Reader:
             file_title = os.path.splitext(os.path.basename(file_path))[0]
             
             # Use PaddleOCR (MinerU's internal engine)
-            result = universal_ocr.ocr(file_path, cls=True)
+            result = get_ocr().ocr(file_path, cls=True)
             
             text_lines = []
             
@@ -110,6 +127,16 @@ class Reader:
                 for line in result[0]:
                     # PaddleOCR returns data in format: [coordinates, (text, confidence_score)]
                     text = line[1][0] 
+                    # --- DIACRITIC POST-PROCESSING ---
+                    text = text.replace(',s', 'ș').replace(',S', 'Ș')
+                    text = text.replace(',t', 'ț').replace(',T', 'Ț')
+                    text = text.replace('~s', 'ș').replace('~t', 'ț')
+                    text = text.replace('˘a', 'ă').replace('˘A', 'Ă')
+                    text = text.replace('a˘', 'ă').replace('A˘', 'Ă') # Just in case it flips them
+                    text = text.replace('ıˆ', 'î').replace('ˆı', 'î')
+                    text = text.replace('Iˆ', 'Î').replace('ˆI', 'Î')
+                    text = text.replace('ˆa', 'â').replace('ˆA', 'Â')
+                    text = text.replace('aˆ', 'â').replace('Aˆ', 'Â')
                     text_lines.append(text)
                     
             final_markdown = "\n\n".join(text_lines)
@@ -147,12 +174,20 @@ class Reader:
 
             # Locate the generated Markdown file and Images folder
             # MinerU creates a subfolder inside the output dir named after the PDF
-            pdf_subfolder = os.path.join(temp_out_dir, file_title)
-            md_file_path = os.path.join(pdf_subfolder, f"{file_title}.md")
-            images_dir = os.path.join(pdf_subfolder, "images")
+            # Safely search the entire temporary directory for the generated .md file
+            md_file_path = None
+            images_dir = None
+            for root, dirs, files in os.walk(temp_out_dir):
+                for file in files:
+                    if file.endswith(".md"):
+                        md_file_path = os.path.join(root, file)
+                        images_dir = os.path.join(root, "images")
+                        break
+                if md_file_path:
+                    break
 
-            if not os.path.exists(md_file_path):
-                 return {"file": file_path, "error": "MinerU did not generate a Markdown file."}
+            if not md_file_path or not os.path.exists(md_file_path):
+                 return {"file": file_path, "error": "MinerU did not generate a Markdown file. It may have crashed internally."}
 
             with open(md_file_path, "r", encoding="utf-8") as f:
                 md_content = f.read()
@@ -230,20 +265,19 @@ class Reader:
             handler = file_handlers.get(extension.lower())
 
             if handler:
-                bound_func = partial(handler, self)
-                tasks.append((bound_func, file_path))  # Assign appropriate processing function
-
+                tasks.append((handler, self, file_path))
+        
         try:
             if use_multiprocessing and tasks:
                 # Default to 2 workers to prevent system crashes on heavy ML tasks.
                 with multiprocessing.Pool(processes=2) as pool:
-                    results = pool.starmap(process_file, tasks)
+                    for result in tqdm(pool.imap_unordered(_process_wrapper, tasks), total=len(tasks), desc="Overall Progress", unit="file"):
+                        results.append(result)
             else:
                 for task in tasks:
                     results.append(process_file(*task))
         except Exception as e:
-            results.append({"error": f"Multiprocessing error: {e}"})
-
+            results.append(("System_Error", {"error": f"Multiprocessing error: {e}"}))
         for sub_dir in sub_dirs:  # Recursively scan subdirectories
             results += self.scanner(sub_dir,use_multiprocessing=use_multiprocessing)
 

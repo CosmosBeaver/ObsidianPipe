@@ -22,6 +22,7 @@ def main():
 
 if __name__ == "__main__":
     start=datetime.now()
+    a=2
     main()
     end=datetime.now()
     print(f"time: {end-start}")

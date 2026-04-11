@@ -8,10 +8,10 @@ find_package(pybind11 REQUIRED)
 pybind11_add_module(cpp_linker smart_linker.cpp bindings.cpp)
 
 set_target_properties(cpp_linker PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src)"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src"
     LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/../src"
     LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/../src"
 )
 
 # Optimization for performance while parsing text
-target_compie_options(cpp_linker PRIVATE -03 -std=c++17)
+target_compile_options(cpp_linker PRIVATE -O3 -std=c++17)
