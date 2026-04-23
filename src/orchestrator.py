@@ -11,17 +11,30 @@ def run_pipeline(input_dir, vault_dir):
     os.makedirs(notes_dir, exist_ok=True)
     os.makedirs(attachments_dir, exist_ok=True)
 
+    print("\n--- Obsidian Links Configuration ---")
+    user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
+    
+    raw_keywords = user_input.split(',')
+    master_glossary = [word.strip() for word in raw_keywords if word.strip()]
+    
+    # master_glossary used for creating links in Obsidian between files,
+    # input for cpp_engine
+    master_glossary = list(set(master_glossary))
+    
+    if not master_glossary:
+        print("[WARNING] You introduced no words to be turned into links. The text will not be modified.")
+    else:
+        print(f"Registered {len(master_glossary)} words: {master_glossary} ")
+    
+    cpp_linker.initialize_search_tree(master_glossary)
+
     # --- PASS 1: Multiprocessing Extraction ---
     print("\n--- Pass 1: Extracting Documents ---")
     
     doc_reader = Reader(folder_path=input_dir, attachment_dir=attachments_dir)
     raw_results = doc_reader.scanner(input_dir)
     
-    # master_glossary used for creating links in Obsidian between files,
-    # input for cpp_engine
-    master_glossary = set()
     parsed_documents = {}
-     
 
     for filepath, data in raw_results:
         if "error" in data:
@@ -29,16 +42,8 @@ def run_pipeline(input_dir, vault_dir):
             continue
             
         title = data.get("title", os.path.basename(filepath).split('.')[0])
-        parsed_documents[title] = data
-        
-        if "keywords" in data:
-            master_glossary.update(data["keywords"])
-            
+        parsed_documents[title] = data       
         print(f"[SUCCESS] Parsed: {title}")
-
-    # --- INITIALIZE C++ ENGINE ---
-    print(f"\nInitializing C++ Smart Linker with {len(master_glossary)} terms...") #ex comment
-    cpp_linker.initialize_search_tree(list(master_glossary)) # ex comment
 
     # --- PASS 2: Linking & Markdown Generation ---
     print("\n--- Pass 2: Building Obsidian Vault ---")

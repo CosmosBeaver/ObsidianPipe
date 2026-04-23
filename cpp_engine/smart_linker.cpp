@@ -21,6 +21,41 @@ class SmartLinker {
     vector<TrieNode> trie;
     vector<string> keywords;
 
+    // Building the failure links using BFS
+    void build_failure_links(){
+      queue<int> q;
+      for(auto& pair : trie[0].children){
+        trie[pair.second].fail = 0;
+        q.push(pair.second);
+      }
+
+      while(!q.empty()){
+        int current = q.front();
+        q.pop();
+
+        for(auto& pair : trie[current].children){
+          char c = pair.first;
+          int child = pair.second;
+
+          int fail_node = trie[current].fail;
+          while(fail_node > 0 && !trie[fail_node].children.count(c)){
+            fail_node = trie[fail_node].fail;
+          }
+          if(trie[fail_node].children.count(c)){
+            trie[child].fail = trie[fail_node].children[c];
+          }else {
+            trie[child].fail = 0;
+          }
+
+          // Sticking the outputs of the current node
+          auto& fail_out = trie[trie[child].fail].output;
+          trie[child].output.insert(trie[child].output.end(), fail_out.begin(), fail_out.end()); 
+
+          q.push(child);
+        }
+      }
+    }
+
   public:
     SmartLinker(){
       trie.emplace_back(); // Root node (index 0)
@@ -92,42 +127,6 @@ class SmartLinker {
       }
       result += text.substr(last_pos);
       return result;
-    }
-
-  private:
-    // Building the failure links using BFS
-    void build_failure_links(){
-      queue<int> q;
-      for(auto& pair : trie[0].children){
-        trie[pair.second].fail = 0;
-        q.push(pair.second);
-      }
-
-      while(!q.empty()){
-        int current = q.front();
-        q.pop();
-
-        for(auto& pair : trie[current].children){
-          char c = pair.first;
-          int child = pair.second;
-
-          int fail_node = trie[current].fail;
-          while(fail_node > 0 && !trie[fail_node].children.count(c)){
-            fail_node = trie[fail_node].fail;
-          }
-          if(trie[fail_node].children.count(c)){
-            trie[child].fail = trie[fail_node].children[c];
-          }else {
-            trie[child].fail = 0;
-          }
-
-          // Sticking the outputs of the current node
-          auto& fail_out = trie[trie[child].fail].output;
-          trie[child].output.insert(trie[child].output.end(), fail_out.begin(), fail_out.end()); 
-
-          q.push(child);
-        }
-      }
     }
 };
 
