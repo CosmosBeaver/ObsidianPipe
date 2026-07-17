@@ -4,3 +4,4 @@ venv_mineru/
 test_output/
 cpp_engine/build
 ObsidianVault/
+venv/
