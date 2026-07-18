@@ -1,0 +1,10 @@
+.git
+.obsidian/
+.vscode/
+__pycache__/
+*.pyd
+*.exe
+build/
+cpp_engine/build/
+CMakeCache.txt
+CMakeFiles/

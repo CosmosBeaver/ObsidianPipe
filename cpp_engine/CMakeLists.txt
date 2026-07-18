@@ -5,13 +5,18 @@ project(cpp_engine)
 find_package(pybind11 REQUIRED)
 
 # Creating cpp_linker from the two source files
-pybind11_add_module(cpp_linker smart_linker.cpp bindings.cpp)
+pybind11_add_module(cpp_linker bindings.cpp smart_linker.cpp)
 
-set_target_properties(cpp_linker PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src"
-    LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/../src"
-    LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/../src"
-)
+#set_target_properties(cpp_linker PROPERTIES
+#    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../src"
+#    LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/../src"
+#    LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/../src"
+#)
 
 # Optimization for performance while parsing text
 target_compile_options(cpp_linker PRIVATE -O3 -std=c++17)
+
+#strip symbols to reduce file size on Linux
+if(UNIX AND NOT APPLE)
+    set_target_properties(cpp_linker PROPERTIES LINK_FLAGS "-s")
+endif()
