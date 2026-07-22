@@ -7,6 +7,10 @@ ObsidianVault/
 venv/
 venv1/
 venv_mineru/
+.obsidian/
 
+
+# Local configuration
+config.json
 credentials.json
 token.json
