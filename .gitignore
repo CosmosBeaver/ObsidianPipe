@@ -8,7 +8,7 @@ venv/
 venv1/
 venv_mineru/
 .obsidian/
-
+venv 3.12 python/
 
 # Local configuration
 config.json
