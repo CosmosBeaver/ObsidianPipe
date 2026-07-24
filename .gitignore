@@ -1,7 +1,9 @@
 __pycache__/
+.vscode/
 input_files/
-venv_mineru/
+venv1/
 test_output/
 cpp_engine/build
 ObsidianVault/
 venv/
+
