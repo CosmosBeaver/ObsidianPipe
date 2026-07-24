@@ -16,10 +16,11 @@ def run_pipeline(input_dir, vault_dir):
     os.makedirs(notes_dir, exist_ok=True)
     os.makedirs(attachments_dir, exist_ok=True)
 
-    print("\n--- Obsidian Links Configuration ---")
-    user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
-    
-    raw_keywords = user_input.split(',')
+    if HAS_CPP_ENGINE == True:
+        print("\n--- Obsidian Links Configuration ---")
+        user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
+        raw_keywords = user_input.split(',')
+        
     master_glossary = [word.strip() for word in raw_keywords if word.strip()]
     
     # master_glossary used for creating links in Obsidian between files,
