@@ -1,4 +1,5 @@
 {
+    "input_directory": "data/input",
     "obsidian_vault_path": "C:/PATH/TO/YOUR/VAULT",
     "classroom_course_id": "REPLACE_WITH_COURSE_ID",
     "enable_cpp_parser": true

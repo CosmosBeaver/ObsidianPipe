@@ -1,4 +1,3 @@
-import os
 import transformers.models.vision_encoder_decoder.modeling_vision_encoder_decoder as ved
 import json
 import sys
@@ -22,14 +21,18 @@ def patched_ved_forward(self, *args, **kwargs):
 
 ved.VisionEncoderDecoderModel.forward = patched_ved_forward
 # -----------------------------------------
+
+
 from orchestrator import run_pipeline
 from datetime import datetime
 
-def load_config():
-    # __file__ gets the path of the current script (e.g., src/main.py)
-    # .parent.parent goes up to the root folder where config.json lives
-    base_dir = Path(__file__).parent.parent
-    config_path = base_dir / "config.json"
+def get_project_root() -> Path:
+    """Returns the absolute path to the project root directory."""
+    return Path(__file__).resolve().parent.parent
+
+def load_config() -> dict:
+    """Loads the config.json file from the project root."""
+    config_path = get_project_root() / "config.json"
     
     if not config_path.exists():
         print(f"CRITICAL ERROR: {config_path.name} not found!")
@@ -39,35 +42,36 @@ def load_config():
     with open(config_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
-settings = load_config()
-vault_directory = Path(settings.get("obsidian_vault_path"))
-input_dir=Path(settings.get("downloaded_files_path"))
-
-if not vault_directory.exists():
-    print(f"Warning: The vault path {vault_directory} does not exist. Creating it now...")
-    vault_directory.mkdir(parents=True, exist_ok=True)
-
-# 4. Example: Saving a file downloaded from Classroom
-##file_from_classroom = "Course_Syllabus.md"
-##save_destination = vault_directory / file_from_classroom
-##print(f"File will be saved to: {save_destination}")
-
-
-#mihai modifica si tu ca mi e lene sa implementez altceva inafara de hardcodare
 def main():
     print("========================================")
     print(" Starting Obsidian Vault Generation...  ")
     print("========================================")
     
-    if not os.path.exists(input_dir):
-        print(f"Error: Input directory not found at {input_dir}")
-        return
+    settings = load_config()
+    
+    # Extract paths safely 
+    vault_directory = Path(settings.get("obsidian_vault_path", ""))
+    input_dir = Path(settings.get("input_directory", "")) 
+    
+    # If the input directory is relative make it absolute based on the root folder
+    if not input_dir.is_absolute():
+        input_dir = get_project_root() / input_dir
 
-    # Orchestrator
+    # Check and create the Input directory if missing
+    if not input_dir.exists():
+        print(f"Warning: Input directory not found at {input_dir}. Creating it now...")
+        input_dir.mkdir(parents=True, exist_ok=True)
+
+    #  Check and create the Obsidian Vault directory if missing
+    if not vault_directory.exists():
+        print(f"Warning: The vault path {vault_directory} does not exist. Creating it now...")
+        vault_directory.mkdir(parents=True, exist_ok=True)
+
+    #  Pass the resolved pathlib objects to your Orchestrator
     run_pipeline(input_dir, vault_directory)
 
 if __name__ == "__main__":
-    start=datetime.now()
+    start = datetime.now()
     main()
-    end=datetime.now()
-    print(f"time: {end-start}")
+    end = datetime.now()
+    print(f"Execution time: {end - start}")
