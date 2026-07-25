@@ -8,8 +8,9 @@ venv/
 venv1/
 venv_mineru/
 .obsidian/
+build/
 
-
+*.pyd
 # Local configuration
 config.json
 credentials.json

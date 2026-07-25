@@ -2,12 +2,14 @@ import os
 from parsers.document_reader import Reader
 from generators import md_builder
 try:
-    import cpp_engine.cpp_linker
+    import cpp_linker
     HAS_CPP_ENGINE = True
-except ImportError:
+    print("[SUCCESS] Loaded C++ Engine.")
+except ImportError as e:
     HAS_CPP_ENGINE = False
-    print("[!] Warning: Native C++ engine not found. Falling back to pure Python implementation.")
-
+    print(f"[!] Warning: Native C++ engine not found. Falling back to pure Python implementation.")
+    print(f"[DEBUG] The exact import error was: {e}")
+    
 def run_pipeline(input_dir, vault_dir):
     notes_dir = os.path.join(vault_dir, "Notes")
     attachments_dir = os.path.join(vault_dir, "attachments")
@@ -32,7 +34,7 @@ def run_pipeline(input_dir, vault_dir):
         print(f"Registered {len(master_glossary)} words: {master_glossary} ")
     
     if HAS_CPP_ENGINE:
-        cpp_engine.cpp_linker.initialize_search_tree(master_glossary)
+        cpp_linker.initialize_search_tree(master_glossary)
 
     # --- PASS 1: Multiprocessing Extraction ---
     print("\n--- Pass 1: Extracting Documents ---")
@@ -57,7 +59,7 @@ def run_pipeline(input_dir, vault_dir):
         raw_text = doc_data.get('text', "")
         
         if HAS_CPP_ENGINE:
-            linked_text = cpp_engine.cpp_linker.inject_obsidian_links(raw_text) # ex comment
+            linked_text = cpp_linker.inject_obsidian_links(raw_text) # ex comment
         else:
             linked_text = raw_text
         out_path = os.path.join(notes_dir, f"{title}.md")
