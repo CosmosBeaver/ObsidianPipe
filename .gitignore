@@ -11,7 +11,7 @@ venv_mineru/
 build/
 
 *.pyd
-# Local configuration
+# Local configurationgith
 config.json
 credentials.json
 token.json
