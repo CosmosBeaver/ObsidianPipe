@@ -19,7 +19,6 @@ def run_pipeline(input_dir, vault_dir):
     os.makedirs(attachments_dir, exist_ok=True)
 
     if HAS_CPP_ENGINE == True:
-        print("\n--- Obsidian Links Configuration ---")
         user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
         raw_keywords = user_input.split(',')
         

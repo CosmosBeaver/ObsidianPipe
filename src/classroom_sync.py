@@ -98,8 +98,11 @@ def interactive_sync():
             
         selected_course = None
         while True:
-            user_input = input("\nEnter class number, 'back', or 'exit': ").strip().lower()
+            user_input = input("\nEnter class number, 'back', 'done' (to parse), or 'exit': ").strip().lower()
             
+            if user_input == 'done':
+                print("\n[i] Sync complete. Proceeding to Markdown generation...")
+                return
             if user_input == 'exit':
                 print("Exiting Classroom Sync. Goodbye!")
                 return
@@ -147,8 +150,11 @@ def interactive_sync():
         to_download = []
 
         while True:
-            selection = input("\nEnter file numbers (e.g., 0, 2), 'all', 'back', or 'exit': ").strip().lower()
+            selection = input("\nEnter file numbers (e.g., 0, 2), 'all', 'back', 'done', or 'exit': ").strip().lower()
             
+            if selection == 'done':
+                print("\n[i] Sync complete. Proceeding to Markdown generation...")
+                return
             if selection == 'exit':
                 print("Exiting Classroom Sync. Goodbye!")
                 return
@@ -159,51 +165,45 @@ def interactive_sync():
             if selection == 'all':
                 to_download = downloadable_files
                 break
-                
-            raw_indices = selection.split(',')
-            valid = True
-            indices = []
+            else:
+                raw_indices = selection.replace(',', ' ').split()
+                valid = True
+                indices = []
             
-            for x in raw_indices:
-                x = x.strip()
-                if not x:
-                    continue 
-                    
-                if x.isdigit():
-                    idx = int(x)
-                    if 0 <= idx < len(downloadable_files):
-                        indices.append(idx)
-                    else:
-                        print(f"[!] Index {idx} is out of bounds. Try again.")
-                        valid = False
-                        break
-                else:
-                    print(f"[!] '{x}' is not a valid number. Try again.")
-                    valid = False
-                    break
-                    
-            if valid and indices:
+                for x in raw_indices:
+                        if x.isdigit():
+                            idx = int(x)
+                            if 0 <= idx < len(downloadable_files):
+                                indices.append(idx)
+                            else:
+                                print(f"[!] Index {idx} is out of bounds.")
+                                valid = False
+                                break
+                        else:
+                            print(f"[!] '{x}' is not a valid number.")
+                            valid = False
+                            break
+                            
+                if not valid:
+                    continue
+                if not indices:
+                    print("[!] No numbers entered. Please try again.")
+                    continue
+                        
                 unique_indices = list(set(indices))
                 to_download = [downloadable_files[i] for i in unique_indices]
-                break
-            elif valid and not indices:
-                print("[!] You didn't enter any numbers. Please try again.")
 
-        if go_back_to_main:
-            continue  # Skips download process, goes back to AVAILABLE CLASSES
-
-        # 4. Download them to the config directory
-        save_dir = get_input_directory()
-        print(f"\nSaving files to: {save_dir}")
-        
-        for f in to_download:
-            try:
-                download_file(drive_service, f['id'], f['title'], save_dir)
-            except Exception as e:
-                print(f"Failed to download {f['title']}: {e}")
+                #  Execute the download immediately inside the while loop
+                save_dir = get_input_directory()
+                print(f"\nSaving files to: {save_dir}")
                 
-        print("\n[SUCCESS] Downloads complete!")
-        input("Press Enter to return to the class list...")
+                for f in to_download:
+                    try:
+                        download_file(drive_service, f['id'], f['title'], save_dir)
+                    except Exception as e:
+                        print(f"Failed to download {f['title']}: {e}")
+                        
+                print("\n[SUCCESS] Download complete! You can select more files, or type 'done' / 'back'.")
 
 if __name__ == '__main__':
     interactive_sync()

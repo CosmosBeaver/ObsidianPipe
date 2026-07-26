@@ -42,9 +42,18 @@ def load_config() -> dict:
     with open(config_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
+import classroom_sync
+
 def main():
+    
+    print("\n========================================")
+    print("  PHASE 1: Google Classroom Sync        ")
     print("========================================")
-    print(" Starting Obsidian Vault Generation...  ")
+    
+    classroom_sync.interactive_sync()
+    
+    print("\n========================================")
+    print("  PHASE 2: Obsidian Vault Generation    ")
     print("========================================")
     
     settings = load_config()
