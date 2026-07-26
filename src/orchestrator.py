@@ -1,8 +1,15 @@
 import os
 from parsers.document_reader import Reader
 from generators import md_builder
-import cpp_linker
-
+try:
+    import cpp_linker
+    HAS_CPP_ENGINE = True
+    print("[SUCCESS] Loaded C++ Engine.")
+except ImportError as e:
+    HAS_CPP_ENGINE = False
+    print(f"[!] Warning: Native C++ engine not found. Falling back to pure Python implementation.")
+    print(f"[DEBUG] The exact import error was: {e}")
+    
 def run_pipeline(input_dir, vault_dir):
     notes_dir = os.path.join(vault_dir, "Notes")
     attachments_dir = os.path.join(vault_dir, "attachments")
@@ -11,10 +18,10 @@ def run_pipeline(input_dir, vault_dir):
     os.makedirs(notes_dir, exist_ok=True)
     os.makedirs(attachments_dir, exist_ok=True)
 
-    print("\n--- Obsidian Links Configuration ---")
-    user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
-    
-    raw_keywords = user_input.split(',')
+    if HAS_CPP_ENGINE == True:
+        user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
+        raw_keywords = user_input.split(',')
+        
     master_glossary = [word.strip() for word in raw_keywords if word.strip()]
     
     # master_glossary used for creating links in Obsidian between files,
@@ -26,7 +33,8 @@ def run_pipeline(input_dir, vault_dir):
     else:
         print(f"Registered {len(master_glossary)} words: {master_glossary} ")
     
-    cpp_linker.initialize_search_tree(master_glossary)
+    if HAS_CPP_ENGINE:
+        cpp_linker.initialize_search_tree(master_glossary)
 
     # --- PASS 1: Multiprocessing Extraction ---
     print("\n--- Pass 1: Extracting Documents ---")
@@ -50,9 +58,10 @@ def run_pipeline(input_dir, vault_dir):
     for title, doc_data in parsed_documents.items():
         raw_text = doc_data.get('text', "")
         
-        linked_text = cpp_linker.inject_obsidian_links(raw_text) # ex comment
-        # linked_text = raw_text # Placeholder for C++
-        
+        if HAS_CPP_ENGINE:
+            linked_text = cpp_linker.inject_obsidian_links(raw_text) # ex comment
+        else:
+            linked_text = raw_text
         out_path = os.path.join(notes_dir, f"{title}.md")
         
         # Write to Markdown

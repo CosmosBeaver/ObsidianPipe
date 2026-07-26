@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.15)
 project(cpp_engine)
 
 # Searching Pybind11
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+
+execute_process(
+    COMMAND "${Python3_EXECUTABLE}" -c "import pybind11; print(pybind11.get_cmake_dir())"
+    OUTPUT_VARIABLE pybind11_DIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
 find_package(pybind11 REQUIRED)
 
 # Creating cpp_linker from the two source files

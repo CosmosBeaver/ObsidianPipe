@@ -1,9 +1,17 @@
 __pycache__/
 .vscode/
 input_files/
-venv1/
 test_output/
 cpp_engine/build
 ObsidianVault/
 venv/
+venv1/
+venv_mineru/
+.obsidian/
+build/
 
+*.pyd
+# Local configurationgith
+config.json
+credentials.json
+token.json
