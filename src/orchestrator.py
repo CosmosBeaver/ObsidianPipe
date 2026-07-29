@@ -10,7 +10,7 @@ except ImportError as e:
     print(f"[!] Warning: Native C++ engine not found. Falling back to pure Python implementation.")
     print(f"[DEBUG] The exact import error was: {e}")
     
-def run_pipeline(input_dir, vault_dir):
+def run_pipeline(input_dir, vault_dir, prompt_keywords=True):
     notes_dir = os.path.join(vault_dir, "Notes")
     attachments_dir = os.path.join(vault_dir, "attachments")
     
@@ -18,12 +18,14 @@ def run_pipeline(input_dir, vault_dir):
     os.makedirs(notes_dir, exist_ok=True)
     os.makedirs(attachments_dir, exist_ok=True)
 
-    if HAS_CPP_ENGINE == True:
+    master_glossary = []
+
+    # Only prompt for keywords if explicitly requested (controlled by CLI)
+    if HAS_CPP_ENGINE == True and prompt_keywords:
         user_input = input("Enter the words you wish to convert to an Obsidian Link (separated by commas):\n ")
         raw_keywords = user_input.split(',')
+        master_glossary = [word.strip() for word in raw_keywords if word.strip()]
         
-    master_glossary = [word.strip() for word in raw_keywords if word.strip()]
-    
     # master_glossary used for creating links in Obsidian between files,
     # input for cpp_engine
     master_glossary = list(set(master_glossary))
@@ -33,7 +35,7 @@ def run_pipeline(input_dir, vault_dir):
     else:
         print(f"Registered {len(master_glossary)} words: {master_glossary} ")
     
-    if HAS_CPP_ENGINE:
+    if HAS_CPP_ENGINE and master_glossary:
         cpp_linker.initialize_search_tree(master_glossary)
 
     # --- PASS 1: Multiprocessing Extraction ---
@@ -58,10 +60,12 @@ def run_pipeline(input_dir, vault_dir):
     for title, doc_data in parsed_documents.items():
         raw_text = doc_data.get('text', "")
         
-        if HAS_CPP_ENGINE:
-            linked_text = cpp_linker.inject_obsidian_links(raw_text) # ex comment
+        # We only inject links if the engine is present and a glossary was provided
+        if HAS_CPP_ENGINE and master_glossary:
+            linked_text = cpp_linker.inject_obsidian_links(raw_text)
         else:
             linked_text = raw_text
+            
         out_path = os.path.join(notes_dir, f"{title}.md")
         
         # Write to Markdown
