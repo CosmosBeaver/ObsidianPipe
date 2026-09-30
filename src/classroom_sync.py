@@ -20,6 +20,39 @@ SCOPES = [
     'https://www.googleapis.com/auth/drive.readonly'
 ]
 
+def get_active_courses(creds):
+    """Returns a list of active courses without prompting the user."""
+    from googleapiclient.discovery import build
+    classroom_service = build('classroom', 'v1', credentials=creds)
+    results = classroom_service.courses().list(courseStates=['ACTIVE']).execute()
+    return results.get('courses', [])
+
+def get_course_materials(creds, course_id):
+    """Returns a list of downloadable dictionaries for a specific course."""
+    from googleapiclient.discovery import build
+    classroom_service = build('classroom', 'v1', credentials=creds)
+    materials_results = classroom_service.courses().courseWorkMaterials().list(courseId=course_id).execute()
+    materials = materials_results.get('courseWorkMaterial', [])
+    
+    downloadable_files = []
+    for item in materials:
+        for material in item.get('materials', []):
+            if 'driveFile' in material:
+                drive_file = material['driveFile']['driveFile']
+                downloadable_files.append({
+                    'id': drive_file['id'],
+                    'title': drive_file['title']
+                })
+    return downloadable_files
+
+def download_selected_files(creds, files, save_dir):
+    """Downloads a specific list of file dictionaries."""
+    from googleapiclient.discovery import build
+    drive_service = build('drive', 'v3', credentials=creds)
+    for f in files:
+        # Reusing your existing download_file function
+        download_file(drive_service, f['id'], f['title'], save_dir)
+
 def get_project_root() -> Path:
     return Path(__file__).resolve().parent.parent
 
