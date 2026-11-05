@@ -7,6 +7,7 @@ ObsidianVault/
 venv/
 venv1/
 venv_mineru/
+venv_python_312/
 .obsidian/
 build/
 
